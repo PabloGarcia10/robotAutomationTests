@@ -45,8 +45,8 @@ And the user search for 'men tshirt'
     Element Should Be Visible    ${menTshirt}
 
 And the user add the product to cart
-    Scroll Element Into View    ${addToCart}
-    Click Element               ${addToCart}
+    Execute Javascript    window.scrollTo(0, 500)
+    Click Element         ${addToCart}
 
 And the user add a second item
     Wait Until Element Is Visible    ${continueShopping}    3s
